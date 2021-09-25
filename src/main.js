@@ -4,17 +4,29 @@ import App from './App.vue';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import i18next from 'i18next';
 import VueI18Next from '@panter/vue-i18next';
-import '@processmaker/vue-form-elements/dist/vue-form-elements.css';
+import '@processmaker/vue-form-elements/dist/css/chunk-vendors.10a48aa0.css';
 import Vuex from 'vuex';
 import ScreenBuilder from '@/components';
 import axios from 'axios';
 import TestComponents from '../tests/components';
 import BootstrapVue from 'bootstrap-vue';
 import Multiselect from '@processmaker/vue-multiselect/src/Multiselect';
-
+import VuePersianDatetimePicker from 'vue-persian-datetime-picker';
 Vue.use(BootstrapVue);
 Vue.config.productionTip = false;
-
+Vue.use(VuePersianDatetimePicker, {
+  name: 'custom-date-picker',
+  props: {
+      inputFormat: 'YYYY-MM-DD HH:mm',
+      format: 'jYYYY-jMM-jDD HH:mm',
+      editable: false,
+      inputClass: 'form-control my-custom-class-name',
+      placeholder: 'Please select a date',
+      altFormat: 'YYYY-MM-DD HH:mm',
+      color: '#00acc1',
+      autoSubmit: false,
+  }
+});
 // Allow strings to be wrapped in $t(...) for translating
 // outside this package. This standalone app just returns
 // the English string

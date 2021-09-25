@@ -98,6 +98,7 @@
       </div>
 
       <draggable
+        data-cy="editor-content"
         class="h-100 custom-css-scope"
         ghost-class="form-control-ghost"
         :value="config[currentPage].items"
@@ -194,7 +195,7 @@
 
     <!-- Inspector -->
     <b-col class="overflow-hidden h-100 p-0 inspector-column">
-      <b-card no-body class="p-0 h-100 border-top-0 border-bottom-0 border-right-0 rounded-0">
+      <b-card no-body class="p-0 h-100 border-top-0 border-bottom-0 border-left-0 rounded-0">
         <b-card-body class="p-0 h-100 overflow-auto">
           <template v-for="accordion in accordions">
             <b-button

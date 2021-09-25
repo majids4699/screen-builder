@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir="rtl">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,5 +13,45 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <style>
+
+      #screen-container .card-header > .row > .col {
+        text-align: right;
+      }
+      #screen-container .card-header > .row > .col > .btn-group.btn-group-sm {
+        flex-direction: row-reverse;
+      }
+      #screen-container .card-header > .row > .col.text-right {
+        text-align: left !important;
+      }
+      #controls.list-group-flush > .list-group-item {
+        text-align: right;
+      }
+      #screen-container > div > .ml-1.ml-auto.btn-group.btn-group-sm {
+        flex-direction: row-reverse;
+      }
+
+      #screen-builder-container > div > .inspector-column > .card {
+        border-right: 1px solid rgba(0, 0, 0, 0.125) !important;
+        border-left: none;
+      }
+      #screen-container > div > .ml-1.ml-auto.btn-group.btn-group-sm {
+        flex-direction: row-reverse;
+      }
+      button[data-cy="toolbar-add"] {
+        margin-right: 0 !important;
+      }
+      .input-group:not(.has-validation) > .form-control:not(:last-child),
+      .input-group:not(.has-validation) > .custom-select:not(:last-child),
+      .input-group:not(.has-validation) > .custom-file:not(:last-child) .custom-file-label::after {
+        border-top-right-radius: 0.2rem;
+        border-bottom-right-radius: 0.2rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      #screen-builder-container select[data-cy="toolbar-page"] {
+        margin-left: 0.25rem;
+      }
+    </style>
   </body>
 </html>
