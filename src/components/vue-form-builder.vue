@@ -195,7 +195,7 @@
 
     <!-- Inspector -->
     <b-col class="overflow-hidden h-100 p-0 inspector-column">
-      <b-card no-body class="p-0 h-100 border-top-0 border-bottom-0 border-right-0 rounded-0">
+      <b-card no-body class="p-0 h-100 border-top-0 border-bottom-0 border-left-0 rounded-0">
         <b-card-body class="p-0 h-100 overflow-auto">
           <template v-for="accordion in accordions">
             <b-button
@@ -350,7 +350,6 @@ import {
 
 import RequiredCheckbox from './utils/required-checkbox';
 
-import '@processmaker/vue-form-elements/dist/vue-form-elements.css';
 import { formTypes } from '@/global-properties';
 import _ from 'lodash';
 

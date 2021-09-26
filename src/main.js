@@ -11,7 +11,20 @@ import axios from 'axios';
 import TestComponents from '../tests/components';
 import BootstrapVue from 'bootstrap-vue';
 import Multiselect from '@processmaker/vue-multiselect/src/Multiselect';
-
+import VuePersianDatetimePicker from 'vue-persian-datetime-picker';
+Vue.use(VuePersianDatetimePicker, {
+  name: 'custom-date-picker',
+  props: {
+    inputFormat: 'YYYY-MM-DD HH:mm',
+    format: 'jYYYY-jMM-jDD HH:mm',
+    editable: false,
+    inputClass: 'form-control my-custom-class-name',
+    placeholder: 'Please select a date',
+    altFormat: 'YYYY-MM-DD HH:mm',
+    color: '#00acc1',
+    autoSubmit: false,
+  },
+});
 Vue.use(BootstrapVue);
 Vue.config.productionTip = false;
 

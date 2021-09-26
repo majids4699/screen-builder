@@ -18,11 +18,11 @@
               class="card-header form-element-header d-flex align-items-center border rounded"
             >
               <i class="fas fa-arrows-alt-v mr-1 text-muted"/>
-              <i v-if="element.config.icon" :class="element.config.icon" class="mr-2 ml-1"/>
+              <i v-if="element.config.icon" :class="element.config.icon" class="ml-2 mr-1"/>
               {{ element.config.name || $t('Variable Name') }}
               <div class="ml-auto">
                 <button
-                  class="btn btn-sm btn-secondary mr-2"
+                  class="btn btn-sm btn-secondary ml-2"
                   :title="$t('Copy Control')"
                   @click="duplicateItem(index)"
                 >
@@ -57,12 +57,12 @@
               v-if="selected === element"
               class="card-header form-element-header d-flex align-items-center"
             >
-              <i class="fas fa-arrows-alt-v mr-1 text-muted"/>
-              <i v-if="element.config.icon" :class="element.config.icon" class="mr-2 ml-1"/>
+              <i class="fas fa-arrows-alt-v ml-1 text-muted"/>
+              <i v-if="element.config.icon" :class="element.config.icon" class="ml-2 mr-1"/>
               {{ element.config.name || $t('Variable Name') }}
               <div class="ml-auto">
                 <button
-                  class="btn btn-sm btn-secondary mr-2"
+                  class="btn btn-sm btn-secondary ml-2"
                   :title="$t('Copy Control')"
                   @click="duplicateItem(index)"
                 >
